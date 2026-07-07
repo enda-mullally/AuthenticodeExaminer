@@ -24,7 +24,7 @@ jobs:
       - name: Build nuget package (pack)
         working-directory: "src\\AuthenticodeExaminer"
         run: |
-          dotnet pack -c Release
+          dotnet pack -c Release -p:PackageId=Forked-AuthenticodeExaminer
 
       - name: Upload nuget package
         uses: actions/upload-artifact@v7
